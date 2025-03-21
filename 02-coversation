@@ -1,0 +1,6 @@
+#!/bin/push
+
+echo "lakshmi::  Hi kavi, How are you?"
+echo "kavi:: Hellow lakshmi,i am fine.how are you doing?"
+echo "lakshmi:: I am good kavi.what's going on?"
+echo "kavi::I started learning shell scripting lakshmi"
