@@ -1,6 +1,8 @@
-#!/bin/push
+#!/bin/bash
+PERSON1=lakshmi
+PERSON2=kavi
 
-echo "lakshmi::  Hi kavi, How are you?"
-echo "kavi:: Hellow lakshmi,i am fine.how are you doing?"
-echo "lakshmi:: I am good kavi.what's going on?"
-echo "kavi::I started learning shell scripting lakshmi"
+echo "$PERSON1::  Hi ${PERSON2}, How are you?"
+echo "${PERSON2}:: Hellow $PERSON1,i am fine.how are you doing?"
+echo "$PERSON1:: I am good ${PERSON2}.what's going on?"
+echo "${PERSON2}::I started learning shell scripting $PERSON1"
