@@ -8,3 +8,5 @@ echo "home directory og current now: $HOME"
 echo "PID of current shell script:$$"
 sleep 100 &
 echo "PID of last backround running process: $!"
+echo "all arguments passed to the shell script seperated by the space: $*"
+
