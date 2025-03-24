@@ -8,4 +8,4 @@ echo "please run this script with root priveleges"
 exit 1
 fi
 
-dnf list installed git
+dnf list install git -y
