@@ -6,3 +6,6 @@ echo "script name: $0"
 echo "current workind directory: $PWD"
 echo "home directory og current now: $HOME"
 echo "PID of current shell script:$$"
+sleep 100
+echo "PID of last backround running process: $!"
+ 
