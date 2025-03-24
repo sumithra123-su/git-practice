@@ -10,18 +10,18 @@ fi
 
 dnf list install git -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo "git nis not installed going to install it"
 dnf lnstall git -y
-  if [$? -ne 0]
+  if [ $? -ne 0 ]
      then
        echo "git installation is not success, please check it"
-      else
-      echo "git installation is success"
-       exit 1
+    else
+        echo "git installation is success"
+         exit 1
    fi
- else
- echo "git is already installerd, nothing to do"
- fi  
+else
+    echo "git is already installerd, nothing to do"
+fi  
 
