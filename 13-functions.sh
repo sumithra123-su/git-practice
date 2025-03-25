@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-R="\e[35m"
+R="\e[31m"
 G="\e[32m"
 N="\e[0m" 
 CHECK_ROOT()
@@ -24,12 +24,12 @@ VALIDATE()
 
 CHECK_ROOT
 
-dnf list install gittt -y
+dnf list install git -y
 
 if [ $? -ne 0 ]
 then
 echo "git nis not installed going to install it"
-dnf lnstall gittt -y
+dnf lnstall git -y
   VALIDATE $? "installing git"
 else
     echo "git is already installerd, nothing to do"
