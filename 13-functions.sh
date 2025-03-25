@@ -15,21 +15,21 @@ CHECK_ROOT()
 VALIDATE()
 {
     if [ $1 -ne 0 ]
-    then
-    echo -e "$2  is..$R FAILED $N"
-    else
-    echo  -e "$2  is.. $G SUCCESS $N"
+     then
+        echo -e "$2  is..$R FAILED $N"
+     else
+         echo  -e "$2  is.. $G SUCCESS $N"
     fi
 }
 
 CHECK_ROOT
 
-dnf list install git -y
+dnf list install gittt -y
 
 if [ $? -ne 0 ]
 then
 echo "git nis not installed going to install it"
-dnf lnstall git -y
+dnf lnstall gittt -y
   VALIDATE $? "installing git"
 else
     echo "git is already installerd, nothing to do"
