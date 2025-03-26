@@ -10,6 +10,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m" 
+Y="\e[33"
 CHECK_ROOT()
 {
   if [ $USERID -ne 0 ]
@@ -29,7 +30,7 @@ VALIDATE()
 }
 USAGE()
 {
-    echo "USAGE.. sudo sh 16.redirection.sh package1 package2 ...."
+    echo -e "$R USAGE.. sudo sh 16.redirection.sh package1 package2 ....$N"
     exit 1
 }
 CHECK_ROOT
@@ -48,6 +49,6 @@ for package in $@ # $@ refers all arguments passed to it
         dnf lnstall $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
       else
-        echo "$package is already installerd,nothing to do it" &>>$LOG_FILE   
+        echo -e "$package is already installerd,$Y nothing to do it $N" &>>$LOG_FILE   
      fi
 done   
