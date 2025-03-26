@@ -27,8 +27,16 @@ VALIDATE()
          echo  -e "$2  is.. $G SUCCESS $N" &>>$LOG_FILE
     fi
 }
-
+USAGE()
+{
+    echo "USAGE.. sudo sh 16.redirection.sh package1 package2 ...."
+}
 CHECK_ROOT
+if[ $# -eq 0]
+ then
+    USAGE
+fi
+
 for package in $@ # $@ refers all arguments passed to it
  do
   dnf list install $package -y  &>>$LOG_FILE
