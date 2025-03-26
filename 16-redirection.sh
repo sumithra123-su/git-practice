@@ -29,7 +29,7 @@ VALIDATE()
 }
 
 CHECK_ROOT
-or package in $@ # $@ refers all arguments passed to it
+for package in $@ # $@ refers all arguments passed to it
  do
   dnf list install $package -y  &>>$LOG_FILE
 
@@ -39,6 +39,6 @@ or package in $@ # $@ refers all arguments passed to it
         dnf lnstall $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
       else
-        echo "$package is already installerd, nothing to do" &>>$LOG_FILE
-    fi  
+        echo "$package is already installerd,nothing to do it" &>>$LOG_FILE   
+     fi
 done   
