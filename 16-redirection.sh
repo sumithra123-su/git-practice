@@ -29,3 +29,16 @@ VALIDATE()
 }
 
 CHECK_ROOT
+or package in $@ # $@ refers all arguments passed to it
+ do
+  dnf list install $package -y  &>>$LOG_FILE
+
+   if [ $? -ne 0 ]
+      then
+        echo "$package nis not installed going to install it" &>>$LOG_FILE
+        dnf lnstall $package -y &>>$LOG_FILE
+        VALIDATE $? "installing $package"
+      else
+        echo "$package is already installerd, nothing to do" &>>$LOG_FILE
+    fi  
+done   
