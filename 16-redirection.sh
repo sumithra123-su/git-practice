@@ -30,6 +30,7 @@ VALIDATE()
 USAGE()
 {
     echo "USAGE.. sudo sh 16.redirection.sh package1 package2 ...."
+    exit 1
 }
 CHECK_ROOT
 if [ $# -eq 0 ]
