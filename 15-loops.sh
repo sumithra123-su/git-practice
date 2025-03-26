@@ -25,7 +25,7 @@ VALIDATE()
 CHECK_ROOT
 for package in $@ # $@ refers all arguments passed to it
 do
-
+  echo $package
 #    dnf list install $package -y  
 
 #     if [ $? -ne 0 ]
