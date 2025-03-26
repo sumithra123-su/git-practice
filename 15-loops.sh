@@ -24,16 +24,15 @@ VALIDATE()
 
 CHECK_ROOT
 for package in $@ # $@ refers all arguments passed to it
-do
-  echo $package
-#    dnf list install $package -y  
+ do
+  dnf list install $package -y  
 
-#     if [ $? -ne 0 ]
-#      then
-#        echo "$package nis not installed going to install it"
-#        dnf lnstall $package -y
-#        VALIDATE $? "installing $package"
-#      else
-#        echo "$package is already installerd, nothing to do"
-#    fi  
+   if [ $? -ne 0 ]
+      then
+        echo "$package nis not installed going to install it"
+        dnf lnstall $package -y
+        VALIDATE $? "installing $package"
+      else
+        echo "$package is already installerd, nothing to do"
+    fi  
 done   
