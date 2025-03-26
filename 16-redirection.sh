@@ -1,7 +1,7 @@
 #!/bin/bash
 LOGS_FLODER="var\log\shell_script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-TIMESTAMP=$(date +%y-%m-%d-%h-%m-%s)
+TIMESTAMP=$(date +%y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOGS_FLODER/$SCRIPT_NAME-$TIMESTAMP.log"
 mkdir -p $LOGS_FLODER
 
@@ -30,7 +30,7 @@ VALIDATE()
 }
 USAGE()
 {
-    echo -e "$R USAGE.. sudo sh 16.redirection.sh package1 package2 ....$N"
+    echo -e "$R USAGE:: $N sudo sh 16.redirection.sh package1 package2 ...."
     exit 1
 }
 CHECK_ROOT
