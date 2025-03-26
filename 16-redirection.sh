@@ -34,7 +34,9 @@ USAGE()
     echo -e "$R USAGE:: $N sudo sh 16.redirection.sh package1 package2 ...."
     exit 1
 }
+
 CHECK_ROOT
+
 if [ $# -eq 0 ]
  then
     USAGE
@@ -42,7 +44,7 @@ fi
  
 for package in $@ # $@ refers all arguments passed to it
  do
-  dnf list install $package -y  &>>$LOG_FILE
+  dnf list install $package   &>>$LOG_FILE
 
    if [ $? -ne 0 ]
       then
