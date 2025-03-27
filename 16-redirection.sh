@@ -1,5 +1,5 @@
 #!/bin/bash
-LOGS_FLODER="/var/log/shell_script"
+LOGS_FLODER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOGS_FLODER/$SCRIPT_NAME-$TIMESTAMP.log"
