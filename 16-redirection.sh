@@ -34,6 +34,7 @@ USAGE()
     echo -e "$R USAGE:: $N sudo sh 16.redirection.sh package1 package2 ...."
     exit 1
 }
+echo "script started execting at :$(date)" &>>$LOG_FILE
 
 CHECK_ROOT
 
